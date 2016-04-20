@@ -153,11 +153,11 @@ ReactQRCode.defaultProps = {
 ReactQRCode.propTypes = {
     renderer: React.PropTypes.oneOf(['canvas', 'svg', 'auto']),
     content: React.PropTypes.string,
-    scale: oneOfType([
+    scale: React.PropTypes.oneOfType([
         React.PropTypes.number,
         React.PropTypes.string
     ]),
-    margin: oneOfType([
+    margin: React.PropTypes.oneOfType([
         React.PropTypes.number,
         React.PropTypes.string
     ]),
