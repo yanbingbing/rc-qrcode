@@ -72,10 +72,6 @@ function getQRVersion(text, ecl) {
     return version;
 }
 
-function toInt(val) {
-
-}
-
 class ReactQRCode extends React.Component {
     render() {
         let renderer = this.props.render || this.props.renderer;
