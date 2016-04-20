@@ -1,0 +1,32 @@
+{
+  "name": "rc-qrcode",
+  "version": "1.0.0",
+  "description": "QRCode Component for React",
+  "main": "lib/index.js",
+  "scripts": {
+    "pack": "NODE_ENV=development webpack --progress --colors",
+    "build": "NODE_ENV=production webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanbingbing/rc-qrcode.git"
+  },
+  "keywords": [
+    "QRCode",
+    "qrcode",
+    "react-component"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "webpack": "^1.12.9"
+  },
+  "author": "onbing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanbingbing/rc-qrcode/issues"
+  },
+  "homepage": "https://github.com/yanbingbing/rc-qrcode#readme"
+}
