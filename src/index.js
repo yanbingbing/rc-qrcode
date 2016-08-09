@@ -1,4 +1,5 @@
 const React = require('react');
+const ReactDOM=require('react-dom');
 const {QRCode, QRErrorCorrectLevel, QRCapacityTable, UTF8Array} = require('./qrcode');
 
 const SUPPORT_CANVAS = !!document.createElement('canvas').getContext;
