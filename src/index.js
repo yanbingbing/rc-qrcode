@@ -1,5 +1,4 @@
 const React = require('react');
-const ReactDOM = require('react-dom');
 const {QRCode, QRErrorCorrectLevel, QRCapacityTable, UTF8Array} = require('./qrcode');
 
 const SUPPORT_CANVAS = !!document.createElement('canvas').getContext;
@@ -107,9 +106,10 @@ class CanvasQRCode extends React.Component {
     }
 
     draw() {
+        if (!this.canvas) return;
         let props = this.props;
         let qrcode = this.qrcode;
-        let canvas = ReactDOM.findDOMNode(this);
+        let canvas = this.canvas;
         let ctx = canvas.getContext('2d');
         let count = qrcode.getModuleCount();
         let scale = +props.scale || 4;
@@ -138,7 +138,7 @@ class CanvasQRCode extends React.Component {
     }
 
     render() {
-        return <canvas />;
+        return <canvas ref={(ref) => { this.canvas = ref; }} />;
     }
 }
 
