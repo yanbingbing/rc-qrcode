@@ -1,6 +1,6 @@
 {
   "name": "rc-qrcode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "QRCode Component for React",
   "main": "lib/index.js",
   "scripts": {
