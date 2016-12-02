@@ -1,9 +1,6 @@
 const React = require('react');
 const {QRCode, QRErrorCorrectLevel, QRCapacityTable, UTF8Array} = require('./qrcode');
 
-const SUPPORT_CANVAS = !!document.createElement('canvas').getContext;
-const SUPPORT_SVG = !!(document.createElementNS && document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
-
 function getQRVersion(text, ecl) {
     let c = UTF8Array(text).length,
         eci = [QRErrorCorrectLevel.L, QRErrorCorrectLevel.M, QRErrorCorrectLevel.Q, QRErrorCorrectLevel.H],
@@ -33,7 +30,7 @@ class ReactQRCode extends React.Component {
     render() {
         let renderer = this.props.render || this.props.renderer;
         if (!renderer || renderer === 'auto') {
-            renderer = SUPPORT_SVG ? 'svg' : (SUPPORT_CANVAS ? 'canvas' : '');
+            renderer = 'svg';
         }
         if (renderer === 'canvas') {
             return <CanvasQRCode {...this.props} />;
