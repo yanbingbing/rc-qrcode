@@ -1,3 +1,4 @@
+const PropTypes = require('prop-types');
 const React = require('react');
 const {QRCode, QRErrorCorrectLevel, QRCapacityTable, UTF8Array} = require('./qrcode');
 
@@ -149,18 +150,18 @@ ReactQRCode.defaultProps = {
 };
 
 ReactQRCode.propTypes = {
-    renderer: React.PropTypes.oneOf(['canvas', 'svg', 'auto']),
-    content: React.PropTypes.string,
-    scale: React.PropTypes.oneOfType([
-        React.PropTypes.number,
-        React.PropTypes.string
+    renderer: PropTypes.oneOf(['canvas', 'svg', 'auto']),
+    content: PropTypes.string,
+    scale: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
     ]),
-    margin: React.PropTypes.oneOfType([
-        React.PropTypes.number,
-        React.PropTypes.string
+    margin: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
     ]),
-    background: React.PropTypes.string,
-    foreground: React.PropTypes.string
+    background: PropTypes.string,
+    foreground: PropTypes.string
 };
 
 module.exports = ReactQRCode;
